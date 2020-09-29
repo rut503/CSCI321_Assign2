@@ -24,7 +24,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hay-Sc-PLW">
                                 <rect key="frame" x="20" y="68" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="K9P-7g-toM" id="oWo-Ki-WgL"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you want to tip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QM-br-ThD">
                                 <rect key="frame" x="20" y="122" width="335" height="18"/>
@@ -64,9 +67,15 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="iaB-RK-bRH">
                                 <rect key="frame" x="18" y="298" width="339" height="31"/>
+                                <connections>
+                                    <action selector="partySizeSlidder:" destination="K9P-7g-toM" eventType="valueChanged" id="exK-nd-ZAO"/>
+                                </connections>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="40" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-xs-NyH">
                                 <rect key="frame" x="140.5" y="184" width="94" height="32"/>
+                                <connections>
+                                    <action selector="tipPercentageStepper:" destination="K9P-7g-toM" eventType="valueChanged" id="HdW-PO-q3z"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,6 +111,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jpd-BZ-gcX"/>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="hay-Sc-PLW" id="A16-j7-wps"/>
+                        <outlet property="outputAmoutShareTextField" destination="MOY-TO-rTH" id="I4v-LL-WUB"/>
+                        <outlet property="partySizeTextField" destination="gF4-hM-SpR" id="AVj-0B-Gwa"/>
+                        <outlet property="tipAmountTextField" destination="RyA-yR-9uM" id="Pdc-me-4hY"/>
+                        <outlet property="tipPercentageTextField" destination="d8Z-uD-mZt" id="oPk-GX-EHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMX-2m-rJR" sceneMemberID="firstResponder"/>
             </objects>
