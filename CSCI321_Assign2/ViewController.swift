@@ -12,6 +12,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var amountTextField: UITextField!
     
+    @IBOutlet weak var tipAmountTextField: UILabel!
+    @IBOutlet weak var tipPercentageTextField: UILabel!
+    @IBOutlet weak var partySizeTextField: UILabel!
+    @IBOutlet weak var outputAmoutShareTextField: UILabel!
     // declaring object for amountFieldDelegate class
     let delegate = amountFieldDelegate()
     
@@ -40,6 +44,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func tipPercentageStepper(_ sender: UIStepper) {
+    }
+    
+    @IBAction func partySizeSlidder(_ sender: UISlider) {
+    }
     /**
     Displays alert in the app with a custome message and a close button to close alert.
      
