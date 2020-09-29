@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var amountTextField: UITextField!
     
+    // declaring object for amountFieldDelegate class
     let delegate = amountFieldDelegate()
     
     override func viewDidLoad() {
@@ -20,7 +21,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         amountTextField.delegate = delegate
     }
     
-    
+    /**
+    * Closes the keyboard when user touches on other parts of the screen
+    * and also converts the amountTextField to floating point and checks if the field is valid or not using
+    *  amoutFieldDelegate class
+    */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
@@ -33,10 +38,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             alert(message: "Please enter proper age.")
             return
         }
-        
-        
     }
     
+    /**
+    Displays alert in the app with a custome message and a close button to close alert.
+     
+     - Parameter message: The custom alert message.
+    */
     func alert ( message: String) {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
