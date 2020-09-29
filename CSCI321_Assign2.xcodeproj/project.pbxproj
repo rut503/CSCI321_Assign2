@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7502722523A8D0008E5599 /* amountFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7502712523A8D0008E5599 /* amountFieldDelegate.swift */; };
 		DF30A5292521EC3B0028A6F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30A5282521EC3B0028A6F4 /* AppDelegate.swift */; };
 		DF30A52B2521EC3B0028A6F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30A52A2521EC3B0028A6F4 /* SceneDelegate.swift */; };
 		DF30A52D2521EC3B0028A6F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30A52C2521EC3B0028A6F4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A7502712523A8D0008E5599 /* amountFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amountFieldDelegate.swift; sourceTree = "<group>"; };
 		DF30A5252521EC3B0028A6F4 /* CSCI321_Assign2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSCI321_Assign2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF30A5282521EC3B0028A6F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF30A52A2521EC3B0028A6F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DF30A5282521EC3B0028A6F4 /* AppDelegate.swift */,
 				DF30A52A2521EC3B0028A6F4 /* SceneDelegate.swift */,
 				DF30A52C2521EC3B0028A6F4 /* ViewController.swift */,
+				4A7502712523A8D0008E5599 /* amountFieldDelegate.swift */,
 				DF30A52E2521EC3B0028A6F4 /* Main.storyboard */,
 				DF30A5312521EC3E0028A6F4 /* Assets.xcassets */,
 				DF30A5332521EC3E0028A6F4 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				DF30A52D2521EC3B0028A6F4 /* ViewController.swift in Sources */,
 				DF30A5292521EC3B0028A6F4 /* AppDelegate.swift in Sources */,
 				DF30A52B2521EC3B0028A6F4 /* SceneDelegate.swift in Sources */,
+				4A7502722523A8D0008E5599 /* amountFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
