@@ -1,8 +1,9 @@
 //
-//  amountFieldDelegate.swift
+//  ViewController.swift
 //  CSCI321_Assign2
 //
-//  Created by Aviraj Parmar on 9/29/20.
+//  Created by Rutvik Patel (Z1865128).
+//  Created by Aviraj Parmar (Z1861160).
 //  Copyright © 2020 Rut Codes. All rights reserved.
 //
 
@@ -11,11 +12,11 @@ import UIKit
 
 /**
  class amountFieldDelegate
- this class is to check weather the field enter with decimal point is valid or not
-  it also wont let you enter an invalid decimal point.
+ this class is to check weather the field enter with decimal point is valid or not it also wont let you enter an invalid decimal point.
  
- - Return: true ( if the field is valid and let you continue )
-         false ( if the field is invalid and does not let you continue )
+ - Citation: Taken from Professor's Lecture.
+ 
+ - Returns: true if the field is valid and let you continue or false if the field is invalid and does not let you continue
  
  */
 class amountFieldDelegate: NSObject, UITextFieldDelegate {
