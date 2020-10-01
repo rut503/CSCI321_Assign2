@@ -21,13 +21,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hay-Sc-PLW">
-                                <rect key="frame" x="20" y="68" width="335" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hay-Sc-PLW">
+                                <rect key="frame" x="20" y="68" width="301" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="K9P-7g-toM" id="oWo-Ki-WgL"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you want to tip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QM-br-ThD">
                                 <rect key="frame" x="20" y="122" width="335" height="18"/>
@@ -67,21 +64,37 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="iaB-RK-bRH">
                                 <rect key="frame" x="18" y="298" width="339" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="partySizeSlidder:" destination="K9P-7g-toM" eventType="valueChanged" id="exK-nd-ZAO"/>
+                                    <action selector="partySizeSlidder:" destination="K9P-7g-toM" eventType="valueChanged" id="PpW-mJ-Wec"/>
                                 </connections>
                             </slider>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="40" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-xs-NyH">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" maximumValue="40" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-xs-NyH">
                                 <rect key="frame" x="140.5" y="184" width="94" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="tipPercentageStepper:" destination="K9P-7g-toM" eventType="valueChanged" id="HdW-PO-q3z"/>
+                                    <action selector="tipPercentageStepper:" destination="K9P-7g-toM" eventType="valueChanged" id="TiZ-q2-ShF"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M89-Ao-HdE">
+                                <rect key="frame" x="331" y="76" width="24" height="17.5"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="checkmark.rectangle.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterBillAmountButtonPress:" destination="K9P-7g-toM" eventType="touchUpInside" id="ufl-mR-PEA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RyA-yR-9uM" firstAttribute="leading" secondItem="d8Z-uD-mZt" secondAttribute="trailing" constant="5" id="0Jn-hY-jXQ"/>
                             <constraint firstItem="hay-Sc-PLW" firstAttribute="leading" secondItem="jpd-BZ-gcX" secondAttribute="leading" constant="20" id="17h-Qo-ahJ"/>
+                            <constraint firstItem="M89-Ao-HdE" firstAttribute="leading" secondItem="hay-Sc-PLW" secondAttribute="trailing" constant="10" id="1AN-QM-N6R"/>
                             <constraint firstItem="DIi-qd-E95" firstAttribute="leading" secondItem="jpd-BZ-gcX" secondAttribute="leading" constant="20" id="4Rr-7M-zKN"/>
                             <constraint firstItem="1QM-br-ThD" firstAttribute="top" secondItem="hay-Sc-PLW" secondAttribute="bottom" constant="20" id="5Hn-t3-PIn"/>
                             <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="1QM-br-ThD" secondAttribute="trailing" constant="20" id="5yi-4K-Aog"/>
@@ -99,29 +112,33 @@
                             <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="MOY-TO-rTH" secondAttribute="trailing" constant="20" id="f9Y-x2-CsW"/>
                             <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="ELN-OP-wQP" secondAttribute="trailing" constant="20" id="fWj-LN-b04"/>
                             <constraint firstItem="1QM-br-ThD" firstAttribute="leading" secondItem="jpd-BZ-gcX" secondAttribute="leading" constant="20" id="gYS-yr-bSH"/>
-                            <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="hay-Sc-PLW" secondAttribute="trailing" constant="20" id="gal-BP-nca"/>
                             <constraint firstItem="KSe-xs-NyH" firstAttribute="top" secondItem="d8Z-uD-mZt" secondAttribute="bottom" constant="10" id="hKR-qG-RGw"/>
                             <constraint firstItem="iaB-RK-bRH" firstAttribute="leading" secondItem="jpd-BZ-gcX" secondAttribute="leading" constant="20" id="hgT-QF-YH2"/>
                             <constraint firstItem="ELN-OP-wQP" firstAttribute="top" secondItem="jpd-BZ-gcX" secondAttribute="top" constant="40" id="jPK-Uh-WUF"/>
                             <constraint firstItem="RyA-yR-9uM" firstAttribute="centerY" secondItem="d8Z-uD-mZt" secondAttribute="centerY" id="lZ9-ZW-elw"/>
                             <constraint firstItem="gF4-hM-SpR" firstAttribute="top" secondItem="DIi-qd-E95" secondAttribute="bottom" constant="10" id="seO-zI-7TG"/>
+                            <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="M89-Ao-HdE" secondAttribute="trailing" constant="20" id="t6c-Hc-rL1"/>
                             <constraint firstItem="hay-Sc-PLW" firstAttribute="top" secondItem="ELN-OP-wQP" secondAttribute="bottom" constant="10" id="xCu-jU-ngI"/>
+                            <constraint firstItem="M89-Ao-HdE" firstAttribute="centerY" secondItem="hay-Sc-PLW" secondAttribute="centerY" id="yQi-Bx-Wn0"/>
                             <constraint firstItem="jpd-BZ-gcX" firstAttribute="trailing" secondItem="DIi-qd-E95" secondAttribute="trailing" constant="20" id="z8J-PX-udo"/>
                             <constraint firstItem="DIi-qd-E95" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jpd-BZ-gcX" secondAttribute="leading" id="zAj-8Z-9Jb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jpd-BZ-gcX"/>
                     </view>
                     <connections>
-                        <outlet property="amountTextField" destination="hay-Sc-PLW" id="A16-j7-wps"/>
-                        <outlet property="outputAmoutShareTextField" destination="MOY-TO-rTH" id="I4v-LL-WUB"/>
-                        <outlet property="partySizeTextField" destination="gF4-hM-SpR" id="AVj-0B-Gwa"/>
-                        <outlet property="tipAmountTextField" destination="RyA-yR-9uM" id="Pdc-me-4hY"/>
-                        <outlet property="tipPercentageTextField" destination="d8Z-uD-mZt" id="oPk-GX-EHc"/>
+                        <outlet property="amountTextField" destination="hay-Sc-PLW" id="vxY-EH-yxC"/>
+                        <outlet property="billAmountPerPersonLabel" destination="MOY-TO-rTH" id="odK-zz-j6M"/>
+                        <outlet property="partySizeLabel" destination="gF4-hM-SpR" id="KUa-j1-0nj"/>
+                        <outlet property="tipAmountLabel" destination="RyA-yR-9uM" id="qdh-g2-Ccf"/>
+                        <outlet property="tipPercentLabel" destination="d8Z-uD-mZt" id="8Cz-Te-3uF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMX-2m-rJR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="130"/>
+            <point key="canvasLocation" x="760.79999999999995" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
