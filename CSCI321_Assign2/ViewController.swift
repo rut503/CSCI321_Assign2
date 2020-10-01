@@ -2,7 +2,8 @@
 //  ViewController.swift
 //  CSCI321_Assign2
 //
-//  Created by Rutvik Patel on 9/28/20.
+//   Rutvik Patel on 9/20/20.
+//   Aviraj Parmar on 9/20/20.
 //  Copyright © 2020 Rut Codes. All rights reserved.
 //
 
